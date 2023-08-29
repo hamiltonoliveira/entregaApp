@@ -17,7 +17,6 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import { EntregadorComponent } from './pages/entregador/entregador.component';
 
-
 import { WebcamModule } from 'ngx-webcam';
 
 @NgModule({
