@@ -1,0 +1,20 @@
+<!--
+<section>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Entregadores</h5>
+      <p class="card-text">Fature de R$1.250 até R$5.000 por Mês realizando entregas na sua região.</p>
+      <button mat-fab extended>Incluir</button>
+    </div>
+  </div>
+ </section>
+ -->
+
+ <section>
+  <webcam
+  [height]="300"
+  [width]="400"
+  [trigger]="triggerObservable"
+  (imageCapture)="handleImageCapture($event)"></webcam>
+<button mat-button color="accent" (click)="capture()" >Capturar Foto</button>
+</section>

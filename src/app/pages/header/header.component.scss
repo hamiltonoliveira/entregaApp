@@ -33,24 +33,18 @@ $container-max-width: 960px;
   }
 }
 
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .headerMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Arial', sans-serif; /* Altere a fonte conforme necessário */
-  background-color: #e63ec4; /* Altere a cor de fundo conforme necessário */
+  background-color: rgb(91, 82, 69); /* Altere a cor de fundo conforme necessário */
   color: #fff; /* Cor do texto */
 }
 
-.white-color {
+.amarelo-color {
       flex: 1;
-      color: #ffffff;
+      color: rgb(240, 243, 234);
   }
 
 .material-icons {

@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
+import { EntregadorComponent } from './pages/entregador/entregador.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent } // Define the login route
+  { path: 'login', component: LoginComponent },
+  { path: 'entregador', component: EntregadorComponent }
 ];
 
 

@@ -13,11 +13,19 @@ import { HeaderComponent } from './pages/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { LoginComponent } from './pages/login/login.component';
 
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import { EntregadorComponent } from './pages/entregador/entregador.component';
+
+
+import { WebcamModule } from 'ngx-webcam';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    EntregadorComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,10 @@ import { LoginComponent } from './pages/login/login.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule,
+    MatCardModule,
+    WebcamModule
   ],
   providers: [],
   bootstrap: [AppComponent]

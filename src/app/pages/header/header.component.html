@@ -1,9 +1,19 @@
 <section>
   <mat-toolbar class="headerMenu">
-    <span class="material-icons white-color" style="vertical-align: middle"
-      >directions_bike</span>
-    <span class="material-icons">
-      <a routerLink="/login"> login </a>
-    </span>
+    <div style="display: flex; align-items: center;">
+      <span class="material-icons amarelo-color" style="vertical-align: middle;">directions_bike</span>
+      <span style="margin-left: 5px;"><span class="amarelo-color">Entrega Já</span></span>
+    </div>
+
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" style="height: auto;">
+      <button mat-menu-item routerLink="/login"><mat-icon>login</mat-icon>Logar</button>
+      <button mat-menu-item routerLink="/entregador"><mat-icon>add</mat-icon>Cadastro</button>
+      <button mat-menu-item><mat-icon>apps</mat-icon>Histórico das entregas</button>
+      <button mat-menu-item><mat-icon>more</mat-icon>Notificações</button>
+    </mat-menu>
+
   </mat-toolbar>
 </section>
