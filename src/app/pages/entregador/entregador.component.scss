@@ -1,0 +1,24 @@
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.formEstilo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0 5px;
+
+  max-height: 350px; /* Defina a nova altura máxima */
+  overflow-y: auto; /* Adicione uma barra de rolagem vertical quando o conteúdo exceder a altura máxima */
+
+  .mat-form-field {
+    width: 100%;
+    margin-top: 5px; /* Reduza o espaçamento superior */
+    .mat-form-field-wrapper {
+      width: 100%;
+    }
+  }
+}

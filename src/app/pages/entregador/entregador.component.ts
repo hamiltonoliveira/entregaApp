@@ -9,6 +9,7 @@ import { Observable, Subject } from 'rxjs';
   styleUrls: ['./entregador.component.scss']
 })
 export class EntregadorComponent {
+  panelOpenState = false;
 
   triggerObservable: Subject<void> = new Subject<void>();
   capturedImage: string | undefined;

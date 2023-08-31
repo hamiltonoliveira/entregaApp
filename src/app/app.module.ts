@@ -19,6 +19,11 @@ import { EntregadorComponent } from './pages/entregador/entregador.component';
 
 import { WebcamModule } from 'ngx-webcam';
 
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +41,11 @@ import { WebcamModule } from 'ngx-webcam';
     MatToolbarModule,
     MatMenuModule,
     MatCardModule,
-    WebcamModule
+    WebcamModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

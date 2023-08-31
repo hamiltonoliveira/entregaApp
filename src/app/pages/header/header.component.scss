@@ -47,6 +47,11 @@ $container-max-width: 960px;
       color: rgb(240, 243, 234);
   }
 
-.material-icons {
-  margin-left: auto;
-}
+  .mat-menu {
+    display: flex;
+    flex-direction: row;
+
+    .mat-menu-item {
+      margin-right: 10px; /* Espaçamento entre os botões */
+    }
+  }
