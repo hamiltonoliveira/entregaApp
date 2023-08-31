@@ -37,3 +37,20 @@ mat-panel-title {
   color: #8d7b7b;
   padding: 10px;
 }
+
+// Estilos da classe .scroll
+.scroll {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+  }
+
+  &::-webkit-scrollbar-thumb {
+     border-radius: 5px; /* Borda arredondada no indicador */
+  }
+}
+
+
