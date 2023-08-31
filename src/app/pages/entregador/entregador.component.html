@@ -9,10 +9,10 @@
     <button mat-fab color="warn" (click)="capture()">Tirar Foto</button>
   </div>
 </section>
-<section>
-  <br />
 
-  <form class="formEstilo">
+<!--
+<section>
+ <form class="formEstilo">
     <mat-form-field appearance="outline">
       <mat-label>NOME</mat-label>
       <input matInput placeholder="Digite seu nome" required />
@@ -36,4 +36,69 @@
         <button mat-fab color="warn">Salvar</button>
       </div>
   </form>
+</section>
+-->
+
+<section>
+  <mat-accordion>
+    <form class="formEstilo">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Cadastro do Entregador
+        </mat-panel-title>
+
+        <!--
+        <mat-panel-description>
+          This is a summary of the content
+        </mat-panel-description>
+        -->
+
+      </mat-expansion-panel-header>
+
+        <mat-form-field appearance="outline" style="width: 99%;">
+          <mat-label>NOME</mat-label>
+          <input matInput placeholder="Digite seu nome" required/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 99%;">
+          <mat-label>CPF</mat-label>
+          <input matInput placeholder="Digite seu CPF" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 99%;">
+          <mat-label>EMAIL</mat-label>
+          <input matInput placeholder="Digite seu E-mail" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 99%;">
+          <mat-label>SENHA</mat-label>
+          <input matInput placeholder="Digite sua senha" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 99%;">
+          <mat-label>CONFIRMAR A SENHA</mat-label>
+          <input matInput placeholder="Confirmada da senha" required />
+        </mat-form-field>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Endereço do entregador
+        </mat-panel-title>
+        <!--
+        <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+        -->
+      </mat-expansion-panel-header>
+      <p>Aqui inputs</p>
+    </mat-expansion-panel>
+    <div class="button-container">
+      <button mat-fab color="warn">Salvar</button>
+    </div>
+</form>
+  </mat-accordion>
 </section>

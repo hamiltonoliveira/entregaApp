@@ -1,7 +1,9 @@
 .button-container {
   display: flex;
   justify-content: flex-end;
+  margin-top: 5px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .formEstilo {
@@ -10,15 +12,28 @@
   align-items: stretch;
   justify-content: center;
   padding: 0 5px;
-
-  max-height: 350px; /* Defina a nova altura máxima */
-  overflow-y: auto; /* Adicione uma barra de rolagem vertical quando o conteúdo exceder a altura máxima */
+  overflow-y: auto;
+  top:5px;
 
   .mat-form-field {
     width: 100%;
-    margin-top: 5px; /* Reduza o espaçamento superior */
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+
     .mat-form-field-wrapper {
       width: 100%;
     }
+
+    .mat-input-element {
+      height: 30px;
+      font-size: 14px;
+    }
   }
+}
+
+mat-panel-title {
+  font-size: 18px;
+  color: #8d7b7b;
+  padding: 10px;
 }
