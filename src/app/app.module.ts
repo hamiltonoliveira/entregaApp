@@ -24,6 +24,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import {MatExpansionModule} from '@angular/material/expansion';
+
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +52,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

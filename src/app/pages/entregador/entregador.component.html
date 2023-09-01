@@ -41,46 +41,43 @@
 
 <section>
   <mat-accordion>
-    <form class="formEstilo">
+   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="formEstilo">
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title>
           Cadastro do Entregador
         </mat-panel-title>
-
-        <!--
-        <mat-panel-description>
-          This is a summary of the content
-        </mat-panel-description>
-        -->
-
       </mat-expansion-panel-header>
 
         <mat-form-field appearance="outline" style="width: 99%;">
           <mat-label>NOME</mat-label>
-          <input matInput placeholder="Digite seu nome" required/>
+          <input matInput formControlName="nome" placeholder="Digite seu nome" required/>
         </mat-form-field>
 
         <mat-form-field appearance="outline" style="width: 99%;">
           <mat-label>CPF</mat-label>
-          <input matInput placeholder="Digite seu CPF" required />
+          <input matInput formControlName="cpf" name="cpf" placeholder="Digite seu CPF" required />
         </mat-form-field>
 
         <mat-form-field appearance="outline" style="width: 99%;">
           <mat-label>EMAIL</mat-label>
-          <input matInput placeholder="Digite seu E-mail" required />
+          <input matInput formControlName="email" name="email" placeholder="Digite seu E-mail" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 99%;">
+          <mat-label>CELULAR</mat-label>
+          <input matInput formControlName="celular" name="celular" placeholder="Digite seu Celular" required />
         </mat-form-field>
 
         <mat-form-field appearance="outline" style="width: 99%;">
           <mat-label>SENHA</mat-label>
-          <input matInput placeholder="Digite sua senha" required />
+          <input matInput formControlName="password" name="password" placeholder="Digite sua senha" required />
         </mat-form-field>
 
         <mat-form-field appearance="outline" style="width: 99%;">
           <mat-label>CONFIRMAR A SENHA</mat-label>
-          <input matInput placeholder="Confirmada da senha" required />
+          <input matInput formControlName="confirmaPassword" name="confirmaPassword" placeholder="Confirmada da senha" required />
         </mat-form-field>
-
     </mat-expansion-panel>
     <mat-expansion-panel (opened)="panelOpenState = true"
                          (closed)="panelOpenState = false">
@@ -92,33 +89,38 @@
       <div class="scroll">
       <mat-form-field appearance="outline" style="width: 99%;">
         <mat-label>Cep</mat-label>
-        <input matInput placeholder="Digite o Cep" required />
+        <input matInput formControlName="cep" name="cep" placeholder="Digite o Cep" required />
       </mat-form-field>
 
      <mat-form-field appearance="outline" style="width: 99%;">
         <mat-label>Endereço</mat-label>
-        <input matInput placeholder="Digite o endereço" required />
+        <input matInput formControlName="logradouro" name="logradouro" placeholder="Digite o endereço" required />
       </mat-form-field>
 
       <mat-form-field appearance="outline" style="width: 99%;">
         <mat-label>Número</mat-label>
-        <input matInput placeholder="Digite o número" required />
+        <input matInput formControlName="numero" name="numero" placeholder="Digite o número" required />
       </mat-form-field>
 
       <mat-form-field appearance="outline" style="width: 99%;">
         <mat-label>Complemento</mat-label>
-        <input matInput placeholder="Digite o complemento" required />
+        <input matInput formControlName="complemento" name="complemento" placeholder="Digite o complemento" required />
       </mat-form-field>
 
       <mat-form-field appearance="outline" style="width: 99%;">
         <mat-label>Estado</mat-label>
-        <input matInput placeholder="Digite o estado" required />
+        <input matInput formControlName="estado" name="estado" placeholder="Digite o estado" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" style="width: 99%;">
+        <mat-label>Município</mat-label>
+        <input matInput formControlName="municipio" name="municipio" placeholder="Digite o município" required />
       </mat-form-field>
 
     </div>
     </mat-expansion-panel>
     <div class="button-container">
-      <button mat-fab color="warn">Salvar</button>
+      <button mat-fab color="warn" type="submit">Salvar</button>
     </div>
 </form>
   </mat-accordion>
