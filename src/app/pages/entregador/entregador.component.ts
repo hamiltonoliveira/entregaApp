@@ -3,6 +3,7 @@ import { WebcamImage } from 'ngx-webcam';
 
 import { Subject } from 'rxjs';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { CepService } from 'src/app/service/cep.service';
 
 @Component({
   selector: 'app-entregador',
@@ -36,7 +37,7 @@ export class EntregadorComponent {
   });
 
   submitted = false;
-  constructor(private formBuilder: FormBuilder,) {
+  constructor(private formBuilder: FormBuilder, private cepService: CepService) {
   }
 
   ngOnInit() : void {
@@ -72,7 +73,18 @@ export class EntregadorComponent {
     if (this.form.invalid) {
       return;
     }
-   console.log("AQUI")
+    this. buscaCep();
   }
+
+  async buscaCep() {
+    try {
+      const endereco = await this.cepService.getEnderecoPorCep('20775-020').toPromise();
+      console.log(endereco);
+    } catch (error) {
+      console.error("Ocorreu um erro ao buscar o endereço:", error);
+    }
+  }
+
+
 
 }

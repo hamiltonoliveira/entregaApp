@@ -87,7 +87,7 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="scroll">
-      <mat-form-field appearance="outline" style="width: 99%;">
+      <mat-form-field appearance="outline" style="width: 99%;" (ngModelChange)="buscaCep()">
         <mat-label>Cep</mat-label>
         <input matInput formControlName="cep" name="cep" placeholder="Digite o Cep" required />
       </mat-form-field>
