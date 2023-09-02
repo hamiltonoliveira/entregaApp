@@ -78,13 +78,15 @@ export class EntregadorComponent {
 
   async buscaCep() {
     try {
-      const endereco = await this.cepService.getEnderecoPorCep('20775-020').toPromise();
+      const endereco = await new Promise((resolve, reject) => {
+        this.cepService.getEnderecoPorCep('20775-020').subscribe(
+          dados => resolve(dados),
+          error => reject(error)
+        );
+      });
       console.log(endereco);
     } catch (error) {
       console.error("Ocorreu um erro ao buscar o endereço:", error);
     }
   }
-
-
-
 }
