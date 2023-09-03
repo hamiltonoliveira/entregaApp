@@ -14,6 +14,7 @@ export class EntregadorComponent {
   errorMessage: string = '';
   panelOpenState = false;
 
+
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
   }
@@ -73,13 +74,13 @@ export class EntregadorComponent {
     if (this.form.invalid) {
       return;
     }
-    this. buscaCep();
   }
 
-  async buscaCep() {
+  async buscaCep(cep: string) {
     try {
+      if(cep.length < 8){return}
       const endereco = await new Promise((resolve, reject) => {
-        this.cepService.getEnderecoPorCep('20775-020').subscribe(
+        this.cepService.getEnderecoPorCep(cep).subscribe(
           dados => resolve(dados),
           error => reject(error)
         );
