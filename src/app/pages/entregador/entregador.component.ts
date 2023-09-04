@@ -79,13 +79,23 @@ export class EntregadorComponent {
   async buscaCep(cep: string) {
     try {
       if(cep.length < 8){return}
-      const endereco = await new Promise((resolve, reject) => {
+      const endereco: any = await new Promise((resolve, reject) => {
         this.cepService.getEnderecoPorCep(cep).subscribe(
           dados => resolve(dados),
           error => reject(error)
         );
       });
-      console.log(endereco);
+
+      console.log(endereco)
+
+      if (endereco && endereco.logradouro) {
+        this.form.get('logradouro')?.setValue(endereco.logradouro);
+        this.form.get('bairro')?.setValue(endereco.bairro);
+        this.form.get('complemento')?.setValue(endereco.complemento);
+        this.form.get('cidade')?.setValue(endereco.localidade);
+        this.form.get('estado')?.setValue(endereco.uf);
+      }
+
     } catch (error) {
       console.error("Ocorreu um erro ao buscar o endereço:", error);
     }
